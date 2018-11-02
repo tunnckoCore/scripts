@@ -4,7 +4,8 @@
   "license": "Apache-2.0",
   "licenseStart": "2018",
   "scripts": {
-    "start": "node cli.js"
+    "start": "node cli.js",
+    "extends": "./scripts.config.js"
   },
   "engines": {
     "node": "^8.11.0 || >=10.13.0"
