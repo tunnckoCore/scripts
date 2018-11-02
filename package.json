@@ -67,8 +67,7 @@
         "charlike",
         "docks",
         "gitcommit",
-        "new-release",
-        "parse-commit-message"
+        "new-release"
       ]
     },
     "lint": {

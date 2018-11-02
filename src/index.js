@@ -4,6 +4,19 @@ import { shell } from '@tunnckocore/execa';
 
 const ENV = Object.assign({}, proc.env);
 
+/**
+ * Collecting tasks/scripts from various places such as `scripts.config.js`
+ * or even all the defined ones from `package.json`'s field `scripts`.
+ * You can also pass `scripts.extends` and pass local javascript file
+ * or some npm module which in turn can be either CJS or ESM written.
+ *
+ * @name  scripts
+ * @param {Array} [argv] array of string, defaults to `process.argv.slice(2)`
+ * @param {object} [options] optioanl settings, like `cwd` and `manager`, also can pass `tasks` from here
+ * @returns {Promise} if object is resolved, then it's all the collected tasks/scripts from configs,
+ *                    if array, then it's array of [execa][] results.
+ * @public
+ */
 export default async function monora(argv = proc.argv.slice(2), options) {
   const { cwd, tasks, manager, nonStrictBehavior } = Object.assign(
     { cwd: proc.cwd() },
