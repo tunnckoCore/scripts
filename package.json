@@ -33,8 +33,7 @@
   ],
   "bin": {
     "scripts": "cli.js",
-    "tunnckocore-scripts": "cli.js",
-    "@tunnckocore/scripts": "cli.js"
+    "tunnckocore-scripts": "cli.js"
   },
   "main": "index.js",
   "module": "src/index.js",
