@@ -5,7 +5,11 @@
   "licenseStart": "2018",
   "scripts": {
     "start": "node cli.js",
-    "extends": "./scripts.config.js"
+    "extends": "@tunnckocore/config/scripts",
+    "docs": "yarn start docs",
+    "lint": "yarn start lint",
+    "test": "yarn start test",
+    "commit": "yarn start commit"
   },
   "engines": {
     "node": "^8.11.0 || >=10.13.0"
@@ -15,15 +19,8 @@
     "esm": "^3.0.84"
   },
   "devDependencies": {
-    "all-contributors-cli": "^5.4.0",
-    "asia": "^0.19.7",
-    "docks": "^0.6.0",
-    "eslint": "^5.8.0",
-    "eslint-config-esmc": "^1.0.12",
-    "gitcommit": "^1.0.9",
-    "husky": "^1.1.2",
-    "new-release": "^4.0.3",
-    "nyc": "^13.1.0"
+    "@tunnckocore/config": "^0.5.1",
+    "asia": "^0.19.7"
   },
   "files": [
     "src",
@@ -38,7 +35,7 @@
   "main": "index.js",
   "module": "src/index.js",
   "typings": "src/index.d.ts",
-  "version": "0.0.0-semantically-released",
+  "version": "1.0.1",
   "repository": "tunnckoCoreLabs/scripts",
   "homepage": "https://github.com/tunnckoCoreLabs/scripts",
   "author": "Charlike Mike Reagent (https://tunnckocore.com)",
