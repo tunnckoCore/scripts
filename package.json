@@ -19,7 +19,7 @@
     "esm": "^3.0.84"
   },
   "devDependencies": {
-    "@tunnckocore/config": "^0.5.1",
+    "@tunnckocore/config": "^1.0.0",
     "asia": "^0.19.7"
   },
   "files": [
