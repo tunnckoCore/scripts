@@ -2,15 +2,23 @@
 
 'use strict';
 
-const path = require('path');
+const mod = require('module');
 const proc = require('process');
 
-const pkg = require('./package.json');
+const allModulesPaths = require('all-module-paths');
+
 const cli = require('./index');
 
-/* eslint-disable promise/always-return */
+// eslint-disable-next-line no-underscore-dangle
+const paths = mod._nodeModulePaths(proc.cwd());
 
-cli()
+const dirs = allModulesPaths({ paths });
+const PATH = dirs.allPaths.binaries.join(':');
+
+proc.env.PATH = `${PATH}:${process.env.PATH}`;
+
+/* eslint-disable promise/always-return */
+cli(null, { env: proc.env })
   .then((res) => {
     // if not an array, then there's no task given, so show all
     if (!Array.isArray(res)) {

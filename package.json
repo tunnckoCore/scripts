@@ -5,22 +5,24 @@
   "licenseStart": "2018",
   "scripts": {
     "start": "node cli.js",
-    "extends": "@tunnckocore/config/scripts",
-    "docs": "yarn start docs",
-    "lint": "yarn start lint",
-    "test": "yarn start test",
-    "commit": "yarn start commit"
+    "docs": "yarn start docks --outfile .verb.md && verb",
+    "lint": "yarn start eslint '**/*.js' --cache --fix --quiet --format codeframe",
+    "test-only": "node -r esm test",
+    "test": "nyc node test",
+    "precommit": "yarn run lint && yarn run test-only",
+    "commit": "yarn dry",
+    "dry": "git add -A && git status --porcelain && yarn start gitcommit"
   },
   "engines": {
-    "node": "^8.11.0 || >=10.13.0"
+    "node": "^8.10.0 || >=10.13.0"
   },
   "dependencies": {
     "@tunnckocore/execa": "^2.0.2",
+    "all-module-paths": "^0.5.0",
     "esm": "^3.0.84"
   },
   "devDependencies": {
-    "@tunnckocore/config": "^0.5.1",
-    "asia": "^0.19.7"
+    "asia": "^1.0.0-rc.6"
   },
   "files": [
     "src",

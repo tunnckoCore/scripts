@@ -1,6 +1,7 @@
+import assert from 'assert';
 import test from 'asia';
 import scripts from '../src';
 
-test('todo', async (t) => {
-  t.ok(typeof scripts === 'function');
+test('basic', () => {
+  assert.strictEqual(typeof scripts, 'function');
 });

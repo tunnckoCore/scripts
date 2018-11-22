@@ -2,8 +2,6 @@ import path from 'path';
 import proc from 'process';
 import { shell } from '@tunnckocore/execa';
 
-const ENV = Object.assign({}, proc.env);
-
 /**
  * Collecting tasks/scripts from various places such as `scripts.config.js`
  * or even all the defined ones from `package.json`'s field `scripts`.
@@ -17,8 +15,9 @@ const ENV = Object.assign({}, proc.env);
  *                    if array, then it's array of [execa][] results.
  * @public
  */
-export default async function monora(argv = proc.argv.slice(2), options) {
-  const { cwd, tasks, manager, nonStrictBehavior } = Object.assign(
+export default async function monora(cliArgv, options) {
+  const argv = Array.isArray(cliArgv) ? cliArgv : proc.argv.slice(2);
+  const { cwd, tasks, manager, nonStrictBehavior, env } = Object.assign(
     { cwd: proc.cwd() },
     options,
   );
@@ -44,21 +43,6 @@ export default async function monora(argv = proc.argv.slice(2), options) {
   // if not one given, e.g. running `$ scripts`
   if (argv.length === 0) {
     return scripts;
-  }
-
-  const cwdNodeBin = resolve(cwd, 'node_modules', '.bin');
-  const upperNodeBin = resolve(cwd, '..', '..', 'node_modules', '.bin');
-
-  let env = Object.assign({}, ENV);
-
-  if (!ENV.PATH.includes(cwdNodeBin)) {
-    env = Object.assign({}, env, { PATH: `${cwdNodeBin}:${proc.env.PATH}` });
-  }
-
-  // we are in monorepo package cwd
-  // otherwise we are in monorepo root
-  if (pkg.private !== true && !ENV.PATH.includes(upperNodeBin)) {
-    env = Object.assign({}, env, { PATH: `${upperNodeBin}:${proc.env.PATH}` });
   }
 
   const commands = normalizer(scripts, argv, nonStrictBehavior);
