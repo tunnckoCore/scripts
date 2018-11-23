@@ -5,12 +5,12 @@
   "licenseStart": "2018",
   "scripts": {
     "start": "node cli.js",
-    "docs": "yarn start docks --outfile .verb.md && verb",
+    "docs": "yarn start docks --outfile .verb.md && yarn start verb",
     "lint": "yarn start eslint '**/*.js' --cache --fix --quiet --format codeframe",
     "test-only": "node -r esm test",
-    "test": "nyc node test",
-    "precommit": "yarn run lint && yarn run test-only",
-    "commit": "yarn dry",
+    "test": "yarn start nyc node test/index.js",
+    "precommit": "yarn start lint && yarn start test-only",
+    "commit": "yarn start dry",
     "dry": "git add -A && git status --porcelain && yarn start gitcommit"
   },
   "engines": {
@@ -22,7 +22,7 @@
     "esm": "^3.0.84"
   },
   "devDependencies": {
-    "asia": "^1.0.0-rc.6"
+    "asia": "^1.0.0-rc.7"
   },
   "files": [
     "src",
@@ -46,6 +46,9 @@
     "tag": "latest"
   },
   "renovate": {
+    "extends": "tunnckocore"
+  },
+  "eslintConfig": {
     "extends": "tunnckocore"
   },
   "verb": {
