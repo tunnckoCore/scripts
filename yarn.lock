@@ -12,10 +12,10 @@
     p-map-series "^1.0.0"
     split-cmd "^1.0.0"
 
-all-module-paths@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/all-module-paths/-/all-module-paths-0.5.0.tgz#49bdc5e5dabdc8857db5c29bf96ed873092a0869"
-  integrity sha512-SoBtMg68ze4/Z2KACbZEqgAdb9D+WztnmDmrOtgdmSAtpM6B9ZW8osEdDmXfrD6DIeZ7mfjwZKyLKuaJAar/Wg==
+all-module-paths@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/all-module-paths/-/all-module-paths-0.7.0.tgz#2ca84a6b2eb7543c678312e60ade16cfc7cc46c7"
+  integrity sha512-q2lT5Pe1lchyNKioKVqzIl6qCrI+oy6A6oq1xGYS07+mioH7yzOdleg9+n99tLTf2EcmNPWYyEZZ9QCHD9D7HQ==
   dependencies:
     esm "^3.0.84"
     global-dirs "^0.1.1"
