@@ -58,11 +58,11 @@ jobtest: &jobtest
         name: Checking and linting
         command: |-
            yarn add --dev eslint-config-tunnckocore@next eslint prettier &&
-           yarn scripts lint &&
+           yarn start lint &&
            yarn remove eslint-config-tunnckocore eslint prettier
     - run:
         name: Testing your project
-        command: yarn global add nyc && yarn scripts test
+        command: yarn global add nyc && yarn start test
     - save_cache:
         key: scripts-{{ checksum "yarn.lock" }}
         paths: node_modules
@@ -110,10 +110,10 @@ jobs:
       - *restore_modules_cache
       - run:
           name: Bundling your awesome project
-          command: yarn scripts build || echo "No build step."
+          command: yarn start build || echo "No build step."
       - run:
           name: Releasing and publishing
-          command: yarn global add @tunnckocore/release-cli && yarn scripts release
+          command: yarn global add @tunnckocore/release-cli && yarn start release
 
 workflows:
   version: 2
