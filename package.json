@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@tunnckocore/execa": "^2.0.2",
-    "all-module-paths": "^0.5.0",
+    "all-module-paths": "^0.7.0",
     "esm": "^3.0.84"
   },
   "devDependencies": {
