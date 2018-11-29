@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@tunnckocore/execa": "^2.2.1",
-    "all-module-paths": "^0.7.0",
+    "all-module-paths": "^0.7.1",
     "esm": "^3.0.84"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
   "main": "index.js",
   "module": "src/index.js",
   "typings": "src/index.d.ts",
-  "version": "1.0.1",
+  "version": "1.2.4",
   "repository": "tunnckoCoreLabs/scripts",
   "homepage": "https://github.com/tunnckoCoreLabs/scripts",
   "author": "Charlike Mike Reagent (https://tunnckocore.com)",
