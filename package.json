@@ -17,12 +17,12 @@
     "node": "^8.10.0 || >=10.13.0"
   },
   "dependencies": {
-    "@tunnckocore/execa": "^2.0.2",
+    "@tunnckocore/execa": "^2.2.1",
     "all-module-paths": "^0.7.0",
     "esm": "^3.0.84"
   },
   "devDependencies": {
-    "asia": "^1.0.0-rc.7"
+    "asia": "^1.0.0-rc.25"
   },
   "files": [
     "src",

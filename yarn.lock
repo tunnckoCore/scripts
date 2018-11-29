@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@tunnckocore/execa@^2.0.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@tunnckocore/execa/-/execa-2.1.2.tgz#c60dcc49ffbe8edb06211db966dda05eb2318186"
-  integrity sha512-uV3ocBiZurQajYx8mIqlg8mTDaoOH2Wp2HDqUUHMLEn2AArXK99BF1Cac6FYpj7m7IVXOP94mOWvjK5c8Aa+Bg==
+"@tunnckocore/execa@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@tunnckocore/execa/-/execa-2.2.1.tgz#34557ab1a44af060edd9938b41d9508fffb3c399"
+  integrity sha512-YkRe0ny24JKuoxo/uIx7TzbunGnsfsQZ7neuIGPRnh1ykHG50FijGH9tUaTZfqzyrvMJF31Uh2QVmgEBjnFuXg==
   dependencies:
     esm "^3.0.84"
     execa "^1.0.0"
@@ -20,10 +20,10 @@ all-module-paths@^0.7.0:
     esm "^3.0.84"
     global-dirs "^0.1.1"
 
-asia@^1.0.0-rc.7:
-  version "1.0.0-rc.7"
-  resolved "https://registry.yarnpkg.com/asia/-/asia-1.0.0-rc.7.tgz#9db33fbdaddcbeb16c31c74bbe6099362224698a"
-  integrity sha512-wAkH4jTVl1t5j80AD3KrS6usK+NrKbMCesp/REQVT90Umf/VvuL8M1Xvs1qSphRLZpsgDlRcJEoi6wts36qLJQ==
+asia@^1.0.0-rc.25:
+  version "1.0.0-rc.25"
+  resolved "https://registry.yarnpkg.com/asia/-/asia-1.0.0-rc.25.tgz#be91fb8cb50ae1501c516a70258b57f684d92c6f"
+  integrity sha512-HTpRiz1qWD7agvNVICV4kdl+Vs76LpNDj/aDZlMlGBSu9NwKfz9o5nDT8l+Hr8TQqo+79EnNBrlDKjFyg4293w==
 
 cross-spawn@^6.0.0:
   version "6.0.5"
