@@ -17,7 +17,7 @@
     "node": "^8.10.0 || >=10.13.0"
   },
   "dependencies": {
-    "@tunnckocore/execa": "^2.2.1",
+    "@tunnckocore/execa": "^3.0.0",
     "all-module-paths": "^0.7.1",
     "esm": "^3.0.84"
   },
